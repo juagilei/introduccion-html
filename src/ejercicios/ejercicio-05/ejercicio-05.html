@@ -6,19 +6,49 @@
   <body>
     <h1>Ejercicio 5: Formularios</h1>
     <!-- Crea un formulario con el método "post" -->
+    <!-- Utilizo la etiqueta <form> --> 
+      <!--action indica la dirección donde estaria la aplicación que deberia de tratar los datos en el sevidor  y method para indicar si es un post o un get-->
+    
+      <form action="#" method="post">
 
     <!-- Añade un campo de texto para el nombre con el atributo "name" establecido como "nombre" -->
+    <!-- Introduzco una etiqueta que se llame nombre-->
+        <label for="name">Nombre:</label>
+    <!-- Introduzco el input para introducir un dato donde se requiere el nombre-->
+    <!-- Especifico e tipo de dato <type> el identificador <id> el dato <name> y si es requerido <required>-->
+
+        <input type="text" id="name" name="nombre" required/><br/>
 
     <!-- Añade un campo de texto para el correo electrónico con el atributo "name" establecido como "email" -->
+        <label for="name">Email:</label>
+        <input type="email" id="name" name="pepe@gmail.com" required/><br/>
 
     <!-- Añade un campo de selección para la edad con el atributo "name" establecido como "edad" -->
+        <label for="name">Edad:</label>
+        <input type="number" id="name" name="48" required/><br/>
     
     <!-- Añade un campo de selección para el sexo con el atributo "name" establecido como "sexo" -->
+        <label for="name">Sexo:</label>
+        <input type="text" id="name" name="hombre" required/><br/>
+    <!--Otra forma seria selecionando las opciones-->
+        <label for="HOMBRE">Hombre</label>
+        <input type="radio" id="hombre" name="sexo" value="HOMBRE"/><br/>
+        <label for="MUJER">Mujer</label>
+        <input type="radio" id="hombre" name="sexo" value="MUJER"/><br/>
+        
+
 
     <!-- Añade un campo de contraseña para la contraseña con el atributo "name" establecido como "contraseña" -->
+        <label for="contraseña">Contraseña</label>
+        <input type="password" id="contraseña" name="pepedo"/><br/>
 
     <!-- Añade un campo de confirmación de contraseña para la confirmación de contraseña con el atributo "name" establecido como "confirmación de contraseña" -->
-
+      <label for="contraseña">Confirmación de contraseña</label>
+        <input type="password" id="contraseña" name="pepedo"/><br/>
     <!-- Añade un botón de envío con el valor "Enviar" -->
+        <input type="button" value="Enviar"/><br/>
+    <!-- Otra forma-->
+        <input type="submit" value="enviar"/><br/>
+    </form>
   </body>
 </html>
