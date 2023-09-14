@@ -6,9 +6,49 @@
   <body>
     <h1>Ejercicio 6: Validación de Formularios</h1>
     <!-- Añade validación a los campos del formulario del ejercicio anterior utilizando atributos de html. -->
-
+    
     <!-- Verifica que los campos de texto no estén vacíos -->
 
+    <form action="#" method="post" onsubmit="return confirma_contraseña()">
+
+          <label for="name">Nombre:</label>
+          <input type="text" id="name" name="nombre" required/><br/>
+  
+          <label for="email">Email:   </label>
+          <input type="email" id="email" name="email" required/><br/>
+  
+          <label for="name">Edad:    </label>
+          <input type="number" id="edad" name="edad" required/><br/>
+      
+          <label for="HOMBRE">Hombre</label>
+          <input type="radio" id="hombre" name="sexo" value="HOMBRE"/><br/>
+          <label for="MUJER">Mujer  </label>
+          <input type="radio" id="hombre" name="sexo" value="MUJER"/><br/>
+
+          <label for="contraseña">Contraseña            </label>
+          <input type="password" id="contraseña" name="contraseña" required/><br/>
+  
+          <label for="confirmar_contraseña">Confirmación de contraseña</label>
+          <input type="password" id="confirmar_contraseña" name="confirmar_contraseña" required/><br/>
+      
+          <input type="submit" value="Enviar"/><br/>
+    </form>
+
     <!-- Verifica que la contraseña y la confirmación de contraseña tengan la misma longitud. -->
+    <script>
+      function confirma_contraseña() {
+        const contraseña = document.getElementById('contraseña')
+        const confirmar_contraseña = document.getElementById('confirmar_contraseña')
+
+        if (contraseña.value !== confirmar_contraseña.value) {
+          alert('Las contraseñas no coinciden')
+          return false
+        }
+
+        return true
+      }
+      
+    </script>
+
   </body>
 </html>
